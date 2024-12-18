@@ -9,8 +9,7 @@ public class Book {
 	private String category;
 
 	Book() {
-		
-		
+
 	}
 
 	Book(int bId, String bookTitle, double price, double rating, String author, String category) {
@@ -68,6 +67,13 @@ public class Book {
 
 	public void setCategory(String category) {
 		this.category = category;
+	}
+
+	public void display() {
+		System.out.println("Book id   : " + this.bId);
+		System.out.println("Book Title: " + this.bookTitle);
+		System.out.println("Book id  : " + this.bId);
+
 	}
 
 }
