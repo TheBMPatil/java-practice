@@ -8,6 +8,7 @@ public class Library {
 	static void loginToLibrary() {
 		int size = 50;
 		Book[] books = new Book[size];
+		BookManagement.hardCodedBooks(books);
 		int choice;
 		do {
 
@@ -21,6 +22,7 @@ public class Library {
 				break;
 			case 3:
 				System.out.println("3 ");
+				BookManagement.displayAllBooks(books);
 				break;
 			case 4:
 				System.out.println("4 ");
