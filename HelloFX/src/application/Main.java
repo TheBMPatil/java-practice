@@ -1,26 +1,43 @@
 package application;
-	
-import javafx.application.Application;
-import javafx.stage.Stage;
-import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.input.KeyCombination;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 
 public class Main extends Application {
-	@Override
-	public void start(Stage primaryStage) {
-		try {
-			BorderPane root = new BorderPane();
-			Scene scene = new Scene(root,400,400);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
+
 	public static void main(String[] args) {
-		launch("Hello");
+		launch(args);
+	}
+
+	@Override
+	public void start(Stage myStage) throws Exception {
+//		Stage stage = new Stage();
+
+		Group root = new Group();
+
+		Scene scene = new Scene(root, Color.BLACK);
+		myStage.setTitle("Stage Demo");
+		Image icon = new Image("logo.png");
+		myStage.getIcons().add(icon);
+
+		myStage.setWidth(620);
+		myStage.setHeight(620);
+		myStage.setFullScreen(true);
+		myStage.setFullScreenExitHint("YOU CAN'T ESCAPE  ! unless you press b");
+		myStage.setFullScreenExitKeyCombination(KeyCombination.valueOf("b"));
+
+//		myStage.setResizable(false);
+
+//		myStage.setX(0);;
+//		myStage.setY(0);;
+
+		myStage.setScene(scene);
+		myStage.show();
+
 	}
 }
