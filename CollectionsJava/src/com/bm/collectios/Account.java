@@ -2,12 +2,14 @@ package com.bm.collectios;
 
 public class Account {
 	double balance;
+	int accId;
 	String name;
 
 	public Account() {
 	}
 
-	public Account(double balance, String name) {
+	public Account(int accID, double balance, String name) {
+		this.accId = accID;
 		this.balance = balance;
 		this.name = name;
 	}
@@ -28,71 +30,20 @@ public class Account {
 		this.name = name;
 	}
 
-//	public void withdrow(double amount) {
-//
-//		if (balance < amount) {
-//
-//			try {
-//				throw new LowBalnceException(getLowBalanceMsg(amount));
-//			} catch (LowBalnceException e) {
-//				e.printStackTrace();
-//			}
-//
-//		} else {
-//
-//			balance -= amount;
-//		}
-//	}
-//
-//	private String getLowBalanceMsg(double amt) {
-//		double less = amt - balance;
-//		String msg = "Itna kam pad rha hai bhai : ";
-//		return msg + less;
-//	}
+	@Override
+	public int hashCode() {
+		return this.accId;
+	}
 
-//	public void withdrow(double amount) {
-//		
-//		if (balance < amount) {
-////			LowBalnceException x=			new  LowBalnceException();
-//			
-//			try {
-//				throw new LowBalnceException("Aukat me rah na bhai itna paisa nahi hain apne pass");
-//			} catch (LowBalnceException e) {
-//				e.printStackTrace();
-//			}
-//			
-//		} else {
-//			
-//			balance -= amount;
-//		}
-//	}
-//	public void withdrow(double amount) throws LowBalnceException {
-//
-//		if (balance < amount) {
-//			// LowBalnceException x= new LowBalnceException();
-//				throw new LowBalnceException(amount, balance);
-//
-//		} else {
-//
-//			balance -= amount;
-//		}
-//	}
-//	public void withdrow(double amount) {
-//		
-//		if (balance < amount) {
-//			// LowBalnceException x= new LowBalnceException();
-//			
-//			try {
-//				throw new LowBalnceException(amount, balance);
-//			} catch (LowBalnceException e) {
-//				e.printStackTrace();
-//			}
-//			
-//		} else {
-//			
-//			balance -= amount;
-//		}
-//	}
+	@Override
+	public boolean equals(Object obj) {
+		Account otherObj = (Account) obj;
+		if (this.accId == otherObj.accId) {
+			return true;
+		}
+		return false;
+
+	}
 
 	public void cheackBalance() {
 		System.out.println("Balance  :  " + balance);

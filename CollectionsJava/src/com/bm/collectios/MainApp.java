@@ -16,10 +16,10 @@ public class MainApp {
 //		randomThings.add("Bhagvat is here");
 //		randomThings.add(9889);
 //		randomThings.add(true);
-		randomThings.add(new Account(1200, "Bhagvat"));
-		randomThings.add(new Account(1220, "Amol"));
-		randomThings.add(new Account(200, "Ajay"));
-		randomThings.add(new Account(100, "Pravin"));
+		randomThings.add(new Account(1,1200, "Bhagvat"));
+		randomThings.add(new Account(2,1220, "Amol"));
+		randomThings.add(new Account(3,200, "Ajay"));
+		randomThings.add(new Account(4,100, "Pravin"));
 //		randomThings.add(34.233);
 		System.out.println("Length : " + randomThings.size());
 
