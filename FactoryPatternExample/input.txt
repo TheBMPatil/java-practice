@@ -1,0 +1,6 @@
+Bike
+car
+Bike 
+bike 
+car 
+truck
